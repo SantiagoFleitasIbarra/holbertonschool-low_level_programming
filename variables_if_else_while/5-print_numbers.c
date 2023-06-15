@@ -10,14 +10,13 @@
 
 int main(void)
 {
-	char num = '0';
+	int nro = 0;
 
-	for ( ; num < '10' ;)
+	for (; nro < 10 ; )
 	{
-	putchar('0' + num);
-	num++;
+	printf("%d", nro);
+	nro++;
 	}
-
-	putchar ('\n');
+	printf("\n");
 	return (0);
 }
