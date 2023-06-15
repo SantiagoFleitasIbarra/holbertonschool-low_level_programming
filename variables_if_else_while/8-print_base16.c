@@ -9,14 +9,13 @@
 
 int main(void)
 {
-	int num = '0';
+	int num = 0;
 	char letter = 'a';
 
-	for (; num < 10; )
-	{
+	do {
 	putchar((num % 10) + '0');
 	num++;
-	}
+	} while (num < 10);
 
 	for (; letter <= 'f'; )
 	{
