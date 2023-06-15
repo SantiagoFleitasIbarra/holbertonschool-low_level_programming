@@ -15,7 +15,7 @@ int main(void)
 	min++;
 	}
 
-	do{
+	do {
 	putchar(may);
 	may++;
 	} while (may <= 'Z');
