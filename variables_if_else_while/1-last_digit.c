@@ -3,8 +3,7 @@
 #include <stdio.h>
 
 /**
- *
- * Main - Prints This program will assign a random number to the variable n eac
+ * main - Prints This program will assign a random number to the variable n eac
  * h time it is executed. Complete the source code in order to print the last d
  * igit of the number stored in the variable n.
  *
