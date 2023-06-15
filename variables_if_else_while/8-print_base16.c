@@ -6,10 +6,11 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int num = '0';
-	char letter 'a';
+	char letter = 'a';
 
 	for (; num < 10; )
 	{
