@@ -7,17 +7,20 @@
 */
 int main(void)
 {
-	char min, may;
+	char min = 'a', may = 'A';
 
-	for (min = 'a'; min <= 'z' ; min++)
+	for (; min <= 'z' ;)
 	{
 	putchar(min);
+	min++;
 	}
 
-	for (may = 'A'; may <= 'Z' ; may++)
+	do
 	{
 	putchar(may);
-	}
+	may++;
+	} while (may <= 'Z');
+
 	putchar('\n');
 	return (0);
 }
