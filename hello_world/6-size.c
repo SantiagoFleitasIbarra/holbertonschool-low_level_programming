@@ -1,16 +1,16 @@
 #include <stdio.h>
-int main()
+int main(void)
 {
-	int integerType;
-	float floatType;
-	double doubleType;
-	char charType;
+	int a;
+	long int b;
+	long long int c;
+	char d;
+	float f;
 
-	// Sizeof operator is used to evaluate the size of a variable
-	printf("Size of int: %ld bytes\n",sizeof(integerType));
-	printf("Size of float: %ld bytes\n",sizeof(floatType));
-	printf("Size of double: %ld bytes\n",sizeof(doubleType));
-	printf("Size of char: %ld byte\n",sizeof(charType));
-
-	return 0;
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
+	return (0);
 }
