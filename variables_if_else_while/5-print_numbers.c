@@ -18,5 +18,5 @@ int main(void)
 	nro++;
 	}
 	printf("\n");
-	return (0)
+	return (0);
 }
