@@ -9,7 +9,7 @@ $(NAME): $(OBJ)
 	$(CC) -o m.h $@ $^
 
 %.o: %.c
-    $(CC) -c -o $@ $<
+	$(CC) -c -o m.h $@ $<
 
 clean:
 	rm -f $(OBJ) $(NAME)
