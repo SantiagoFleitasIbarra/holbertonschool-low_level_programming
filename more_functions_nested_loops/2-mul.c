@@ -4,6 +4,7 @@
  * @a: function that multiplies two integers.
  * @b: function that multiplies two integers.
  *
+ * Return: multiplies two integers.
 */
 int mul(int a, int b)
 {
