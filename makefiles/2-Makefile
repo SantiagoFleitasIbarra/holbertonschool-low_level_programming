@@ -6,8 +6,11 @@ NAME=school
 all: $(NAME)
 	$(CC) -o $(NAME) m.h $(SRC)
 
-$(NAME):
+$(NAME): $(OBJ)
 	$(CC) -o m.h $@ $^
+
+%.o: %.c
+	$(CC) -c -o $@ $<
 
 clean:
 	rm -f $(OBJ) $(NAME)
