@@ -4,6 +4,7 @@ OBJ=$(SRC:.c=.o)
 NAME=school
 
 all: $(NAME)
+	$(CC) -o $(NAME) m.h $(SRC)
 
 $(NAME): $(OBJ)
 	$(CC) -o m.h $@ $^
