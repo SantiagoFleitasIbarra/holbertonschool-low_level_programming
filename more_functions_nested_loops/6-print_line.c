@@ -7,12 +7,14 @@
 void print_line(int n)
 {
 
-	char alpha = 'a';
+	int line;
 
-	for (; alpha <= 'z' ; )
+	if (n > 0)
 	{
-		_putchar(alpha);
-		alpha++;
+		for (line = 0; line < n; line++)
+		{
+			_putchar('_');
+		}
 	}
 	_putchar('\n');
 }
