@@ -35,7 +35,7 @@ int main(void)
 		}
 		else
 		{
-			print("%d", num);
+			printf("%d", num);
 		}
 	}
 
