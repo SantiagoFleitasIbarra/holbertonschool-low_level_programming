@@ -12,10 +12,10 @@ void rev_string(char *s)
 	int count;
 	char temp;
 
-	for (count=0; count<tam/2; count++)
+	for (count = 0; count < tam / 2; count++)
 	{
 		temp = s[count];
-		s[count] = s[tam-1-count];
-		s[tam-count-1] = temp;
+		s[count] = s[tam - 1 - count];
+		s[tam - count - 1] = temp;
 	}
 }
