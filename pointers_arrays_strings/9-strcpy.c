@@ -4,6 +4,8 @@
  * terminating null byte (\0), to the buffer pointed to by dest.
  * @dest: pointer
  * @src: pointer
+ *
+ * Return: Always dest (Success)
 */
 char *_strcpy(char *dest, char *src)
 {
