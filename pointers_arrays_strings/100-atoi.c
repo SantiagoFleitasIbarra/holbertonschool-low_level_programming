@@ -3,6 +3,8 @@
  * _atoi - function that convert a string to an integer.
  * @s: string
  *
+ * Return: Always num * sign (Success)
+ *
 */
 int _atoi(char *s)
 {
