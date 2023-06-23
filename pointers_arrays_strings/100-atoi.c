@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _atoi - 
- * @s: 
+ * _atoi - function that convert a string to an integer.
+ * @s: string
  *
 */
 int _atoi(char *s)
@@ -23,6 +23,6 @@ int _atoi(char *s)
 			break;
 		}
 
-	}while (*s++);
+	} while (*s++);
 	return (num * sign);
 }
