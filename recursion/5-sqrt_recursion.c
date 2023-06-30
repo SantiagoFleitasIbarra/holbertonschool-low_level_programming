@@ -1,40 +1,26 @@
 #include "main.h"
 /**
- * _sqrt_recursion - function that returns the natural square root of a number.
- * @n: number
+ * sqrt2 - possible to evaluate
+ * @a: number
+ * @b: number
  * Return: Always n does not have a natural square root, the function should re
  * turn -1
 */
+int sqrt2(int a, int b)
+{
+	if (b * b == a)
+		return (b);
+	else if (b * b > a)
+		return (-1);
+	return (sqrt2(a, b + 1));
+}
+/**
+ * _sqrt_recursion - returns the natural square root of n
+ * @n: Number Integer
+ *
+ * Return: n does not have a natural square root, the function should return -1
+ */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	return (_sqrt_helper(n, 1));
-}
-
-/**
- * _sqrt_helper - helper function
- * @n: number
- * @i: integral
- * Return: Always n does not have a natural square root, the function should re
- * turn -1
-*/
-
-int _sqrt_helper(int n, int i)
-{
-	if (i * i == n)
-	{
-		return (i);
-	}
-	if (i * i > n)
-	{
-		return (-1);
-	}
-	return (_sqrt_helper(n, i + 1));
+	return (sqrt2(n, 1));
 }
