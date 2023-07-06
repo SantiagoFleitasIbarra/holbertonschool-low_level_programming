@@ -3,7 +3,7 @@
 # include <stdlib.h>
 /**
  * _calloc - function that allocates memory for an array, using malloc.
- * @nmeb: number of elements
+ * @nmemb: number of elements
  * @size: size of elements
  * Return: Always t (Success)
 */
