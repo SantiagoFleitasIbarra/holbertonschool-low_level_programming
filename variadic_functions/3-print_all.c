@@ -23,7 +23,7 @@ int printi(va_list a)
 	return (0);
 }
 /**
- * printf - print to f
+ * print_f - print to f
  * @a: list
  * Return: Always 0 (Success)
 */
@@ -40,14 +40,16 @@ int print_f(va_list a)
 int prints(va_list a)
 {
 	char *s;
+
 	s = va_arg(a, char *);
+
 	if (s == NULL)
 	{
 		printf("(nil)");
 		return (0);
 	}
 	printf("%s", s);
-	return(0);
+	return (0);
 }
 /**
  * print_all - print all
