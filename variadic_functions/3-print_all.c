@@ -59,7 +59,7 @@ void print_all(const char * const format, ...)
 	int i, j;
 	char *sep = "";
 	char *sep2 = ", ";
-	va_list foarg;
+	va_list allArgs;
 	printer ops[] = {
 		{"c", printc},
 		{"i", printi},
@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_start(foarg, format);
+	va_start(allArgs, format);
 	i = 0;
 	while (format != NULL && format[i])
 	{
@@ -78,7 +78,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == *(ops[j].c))
 			{
 				printf("%s", sep);
-				ops[j].f(foarg);
+				ops[j].f(allArgs);
 			}
 			j++;
 		}
@@ -86,5 +86,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_end(foarg);
+	va_end(allArgs);
 }
