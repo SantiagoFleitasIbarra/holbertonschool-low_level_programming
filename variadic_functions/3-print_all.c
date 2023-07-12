@@ -42,7 +42,6 @@ int prints(va_list a)
 	char *s;
 
 	s = va_arg(a, char *);
-
 	if (s == NULL)
 	{
 		printf("(nil)");
@@ -61,7 +60,6 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 	char *sep2 = ", ";
 	va_list foarg;
-
 	printer ops[] = {
 		{"c", printc},
 		{"i", printi},
