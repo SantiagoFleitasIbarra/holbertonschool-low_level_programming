@@ -1,7 +1,12 @@
 # include "3-calc.h"
 # include <stdio.h>
 # include <stdlib.h>
-/***/
+/**
+ * main - performs simple operations
+ * @argc: number of command line arguments
+ * @argv: array of command line argument strings
+ * Return: 0 on success, otherwise if invalid input or error, return error code
+ */
 int main(int argc, char *argv[])
 {
 	int num1, num2;
