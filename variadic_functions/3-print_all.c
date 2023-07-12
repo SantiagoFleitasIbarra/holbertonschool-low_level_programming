@@ -3,21 +3,21 @@
 # include <stdio.h>
 # include <stdlib.h>
 /**
- * printc - print to c
+ * print_c - print to c
  * @a: list
  * Return: Always 0 (Success)
 */
-int printc(va_list a)
+int print_c(va_list a)
 {
 	printf("%c", va_arg(a, int));
 	return (0);
 }
 /**
- * printi - print to i
+ * print_i - print to i
  * @a: list
  * Return: Always 0 (Success)
 */
-int printi(va_list a)
+int print_i(va_list a)
 {
 	printf("%d", va_arg(a, int));
 	return (0);
@@ -33,11 +33,11 @@ int print_f(va_list a)
 	return (0);
 }
 /**
- * prints - print to s
+ * print_s - print to s
  * @a: list
  * Return: Always 0 (Success)
 */
-int prints(va_list a)
+int print_s(va_list a)
 {
 	char *s;
 
@@ -61,9 +61,9 @@ void print_all(const char * const format, ...)
 	char *sep2 = ", ";
 	va_list allArgs;
 	printer ops[] = {
-		{"c", printc},
-		{"i", printi},
-		{"s", prints},
+		{"c", print_c},
+		{"i", print_i},
+		{"s", print_s},
 		{"f", print_f},
 		{NULL, NULL}
 	};
