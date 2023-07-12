@@ -1,42 +1,42 @@
-# include "variadic_functions.h"
-# include <stdarg.h>
-# include <stdio.h>
-# include <stdlib.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include "variadic_functions.h"
 /**
- * print_c - print to c
- * @a: list
- * Return: Always 0 (Success)
-*/
+ * print_c - prints char
+ * @a: list to give
+ * Return: always 0
+ */
 int print_c(va_list a)
 {
 	printf("%c", va_arg(a, int));
 	return (0);
 }
 /**
- * print_i - print to i
- * @a: list
- * Return: Always 0 (Success)
-*/
+ * print_i - prints int
+ * @a: list to give
+ * Return: always 0
+ */
 int print_i(va_list a)
 {
 	printf("%d", va_arg(a, int));
 	return (0);
 }
 /**
- * print_f - print to f
- * @a: list
- * Return: Always 0 (Success)
-*/
+ * print_f - prints float
+ * @a: list to give
+ * Return: always 0
+ */
 int print_f(va_list a)
 {
 	printf("%f", va_arg(a, double));
 	return (0);
 }
 /**
- * print_s - print to s
- * @a: list
- * Return: Always 0 (Success)
-*/
+ * print_s - prints string
+ * @a: list to give
+ * Return: always 0
+ */
 int print_s(va_list a)
 {
 	char *s;
@@ -51,15 +51,16 @@ int print_s(va_list a)
 	return (0);
 }
 /**
- * print_all - print all
- * @format: format
-*/
+ * print_all - prints all
+ * @format: format string that says arg types
+ *
+ */
 void print_all(const char * const format, ...)
 {
 	int i, j;
 	char *sep = "";
 	char *sep2 = ", ";
-	va_list allArgs;
+	va_list anyArgs;
 	printer ops[] = {
 		{"c", print_c},
 		{"i", print_i},
@@ -68,7 +69,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_start(allArgs, format);
+	va_start(anyArgs, format);
 	i = 0;
 	while (format != NULL && format[i])
 	{
@@ -78,7 +79,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == *(ops[j].c))
 			{
 				printf("%s", sep);
-				ops[j].f(allArgs);
+				ops[j].f(anyArgs);
 			}
 			j++;
 		}
@@ -86,5 +87,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_end(allArgs);
+	va_end(anyArgs);
 }
