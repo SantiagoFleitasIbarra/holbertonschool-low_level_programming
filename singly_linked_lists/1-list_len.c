@@ -1,7 +1,7 @@
 # include "lists.h"
 /**
  * list_len - length of list_t
- * 
+ *
  * @h: head node
  *
  * Return: number of elements
