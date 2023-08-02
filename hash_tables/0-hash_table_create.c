@@ -14,10 +14,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 
 	htab = malloc(sizeof(hash_table_t));
+
 	if (!htab)
 		return (NULL);
 
 	arr = malloc(sizeof(*arr) * size);
+
 	if (!arr)
 	{
 		free(htab);
