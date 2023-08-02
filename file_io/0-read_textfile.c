@@ -1,5 +1,10 @@
 # include "main.h"
-/***/
+/**
+ * read_textfile - that reads a text file
+ * @filename: variable pointer
+ * @letters: size letters
+ * Return: the actual number of letters
+*/
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t file, l, w;
